@@ -13,7 +13,7 @@ pipeline {
                 echo "Building.."
                 sh '''
                 cd myapp
-                xargs -a requirements.txt apk add
+                pip install -r requirements.txt --break-system-packages
                 '''
             }
         }
