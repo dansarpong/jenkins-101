@@ -13,7 +13,7 @@ pipeline {
                 echo "Building.."
                 sh '''
                 cd myapp
-                apk add $(cat requirements.txt)
+                xargs -a requirements.txt apk add
                 '''
             }
         }
